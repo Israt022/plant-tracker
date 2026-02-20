@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant || Tracker</title>
+    <!--Daisy UI-->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body>
+    <header class="w-[80%] mx-auto">
+        <h1 class="text-6xl text-green-500 font-bold mb-4">Plant Tracker</h1>
+        <div class="grid grid-cols-3 gap-5">
+            <div class="bg-amber-200/70 px-5 p-4 rounded-md">
+                <p id='total' class="text-amber-600 text-3xl ">0</p>
+                <p class="text-amber-600 text-xl ">Total</p>
+            </div>
+            <div class="bg-green-200 px-5 p-4 rounded-md">
+                <p id='thrivingCount' class="text-green-600 text-3xl ">0</p>
+                <p class="text-green-600 text-xl ">Thrive</p>
+            </div>
+            <div class="bg-red-200 px-5 p-4 rounded-md">
+                <p id='strugglingCount' class="text-red-600 text-3xl ">0</p>
+                <p class="text-red-600 text-xl ">Struggling</p>
+            </div>
+        </div>
+    </header>
+
+    <hr class="my-5 text-gray-400">
+
+    <main class="w-[80%] mx-auto">
+        <div class="flex gap-5">
+            <button onclick="toggleStyle('all-filter-btn')" id="all-filter-btn" class="btn btn-neutral">All</button>
+            <button onclick="toggleStyle('thriving-filter-btn')" id="thriving-filter-btn" class="btn btn-soft">Thriving</button>
+            <button onclick="toggleStyle('struggling-filter-btn')" id="struggling-filter-btn" class="btn btn-soft">Struggling</button>
+        </div>
+
+        <!--Filter Card-->
+        <section id="filter-section" class="hidden">
+
+        </section>
+
+        <section id="allCards">
+            <!--card 1-->
+            <div class="card flex flex-row justify-between items-start w-full p-8 border mt-5 mb-4">
+                <!--Main part-1 -->
+                <div class="space-y-4">
+                    <!--part - 1-->
+                    <div>
+                        <h3 class="plantName text-3xl">Plant Name 1</h3>
+                        <p class="latinName">Latin Name</p>
+                    </div>
+
+                    <!--part- 2 -->
+                    <div class="flex gap-4">
+                        <p class="light bg-gray-300 text-gray-600 p-3 py-1 rounded-sm">Bright Indicate</p>
+                        <p class="water bg-gray-300 text-gray-600 p-3 py-1 rounded-sm">Weekly</p>
+                    </div>
+
+                    <!--part-3 -->
+                    <p class="Status border border-success px-4 py-2 rounded inline-block">Not applicable</p>
+                    <p class="notes">
+                        New leaf unfurling by the east window
+                    </p>
+
+                    <div>
+                        <button class="thriving-btn btn btn-outline btn-success">Thrive</button>
+                        <button class="struggling-btn btn btn-outline btn-error">Struggle</button>
+                    </div>
+                </div>
+
+                <!--Main part-2 -->
+                <div>
+                    <button class="btn-delete btn btn-outline btn-error">Delete</button>
+                </div>
+            </div>
+            <!--card 2-->
+            <div class="card flex flex-row justify-between items-start w-full p-8 border mt-5 mb-4">
+                <!--Main part-1 -->
+                <div class="space-y-4">
+                    <!--part - 1-->
+                    <div>
+                        <h3 class="plantName text-3xl">Plant Name 2</h3>
+                        <p class="latinName">Latin Name</p>
+                    </div>
+
+                    <!--part- 2 -->
+                    <div class="flex gap-4">
+                        <p class="light bg-gray-300 text-gray-600 p-3 py-1 rounded-sm">Bright Indicate</p>
+                        <p class="water bg-gray-300 text-gray-600 p-3 py-1 rounded-sm">Weekly</p>
+                    </div>
+
+                    <!--part-3 -->
+                    <p class="Status border border-success px-4 py-2 rounded inline-block">Not applicable</p>
+                    <p class="notes">
+                        New leaf unfurling by the east window
+                    </p>
+
+                    <div>
+                        <button class="thriving-btn btn btn-outline btn-success">Thrive</button>
+                        <button class="struggling-btn btn btn-outline btn-error">Struggle</button>
+                    </div>
+                </div>
+
+                <!--Main part-2 -->
+                <div>
+                    <button class="btn-delete btn btn-outline btn-error">Delete</button>
+                </div>
+            </div>
+            <!--card 3-->
+            <div class="card flex flex-row justify-between items-start w-full p-8 border mt-5 mb-4">
+                <!--Main part-1 -->
+                <div class="space-y-4">
+                    <!--part - 1-->
+                    <div>
+                        <h3 class="plantName text-3xl">Plant Name 3</h3>
+                        <p class="latinName">Latin Name</p>
+                    </div>
+
+                    <!--part- 2 -->
+                    <div class="flex gap-4">
+                        <p class="light bg-gray-300 text-gray-600 p-3 py-1 rounded-sm">Bright Indicate</p>
+                        <p class="water bg-gray-300 text-gray-600 p-3 py-1 rounded-sm">Weekly</p>
+                    </div>
+
+                    <!--part-3 -->
+                    <p class="Status border border-success px-4 py-2 rounded inline-block">Not applicable</p>
+                    <p class="notes">
+                        New leaf unfurling by the east window
+                    </p>
+
+                    <div>
+                        <button class="thriving-btn btn btn-outline btn-success">Thrive</button>
+                        <button class="struggling-btn btn btn-outline btn-error">Struggle</button>
+                    </div>
+                </div>
+
+                <!--Main part-2 -->
+                <div>
+                    <button class="btn-delete btn btn-outline btn-error">Delete</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!--JS-->
+    <script src="/scripts.js"></script>
+</body>
+</html>
